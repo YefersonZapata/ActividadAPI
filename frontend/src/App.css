@@ -1,0 +1,16 @@
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    gap: 0.5rem !important;
+    margin-top: 0.75rem;
+  }
+}
+

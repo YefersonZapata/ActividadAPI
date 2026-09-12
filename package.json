@@ -1,0 +1,31 @@
+{
+  "name": "iu-digital-media-api",
+  "version": "1.0.0",
+  "description": "API REST para gestionar géneros, directores, productoras, tipos y media con MongoDB y Node.js",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "seed": "node src/config/seed.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongodb",
+    "api-rest",
+    "media"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^2.3.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.9.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
