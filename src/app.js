@@ -28,6 +28,23 @@ app.use(cors({
 
 app.use(express.json());
 app.use(morgan('dev'));
+
+app.get('/', (req, res) => {
+  res.json({
+    ok: true,
+    message: 'API funcionando correctamente',
+    endpoints: [
+      '/api',
+      '/api/health',
+      '/api/generos',
+      '/api/directores',
+      '/api/productoras',
+      '/api/tipos',
+      '/api/medias',
+    ],
+  });
+});
+
 app.use('/api', routes);
 app.use(errorHandler);
 
