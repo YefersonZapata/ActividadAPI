@@ -1,9 +1,13 @@
 const mongoose = require('mongoose');
 
-const uri = 'mongodb+srv://YEFERSON:QaA8v-M3XY2VKQ_@cluster0.5nsdzuo.mongodb.net/iu_digital_media?retryWrites=true&w=majority';
+const uri = process.env.MONGODB_URI;
 
 async function connectDB() {
   try {
+    if (!uri) {
+      throw new Error('MONGODB_URI no está definida. Agrega la variable de entorno en tu hosting.');
+    }
+
     await mongoose.connect(uri);
     console.log('Conexión a MongoDB exitosa');
   } catch (error) {
@@ -13,4 +17,3 @@ async function connectDB() {
 }
 
 module.exports = connectDB;
-//og
